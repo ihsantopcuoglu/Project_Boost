@@ -11,10 +11,11 @@ public class CollisionHandler : MonoBehaviour
                 Debug.Log("This thing is friendly");
                 break;
             case "Finish":
-                Debug.Log("Congrats you finished!");
+                LoadNextLevel();
                 break;
             case "Fuel":
                 Debug.Log("You got fuel");
+                other.gameObject.SetActive(false);
                 break;
             default:
                 ReloadLevel();
@@ -22,8 +23,27 @@ public class CollisionHandler : MonoBehaviour
         }
     }
 
+    public void LoadNextLevel()
+    {
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        int NextSceneIndex = currentSceneIndex + 1;
+        if (NextSceneIndex == SceneManager.sceneCountInBuildSettings)
+        {
+            NextSceneIndex = 0;
+        }
+
+        SceneManager.LoadScene(NextSceneIndex);
+    }
+
+    public void Update() {
+        if(Input.GetKeyDown(KeyCode.U)){
+            LoadNextLevel();
+        }
+    }
+
     void ReloadLevel()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(currentSceneIndex);
     }
 }
