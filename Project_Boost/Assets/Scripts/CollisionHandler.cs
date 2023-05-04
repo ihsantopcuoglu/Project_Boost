@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class CollisionHandler : MonoBehaviour
 {
+    [SerializeField] float levelLoadDelay = 2f;
     void OnCollisionEnter(Collision other) 
     {
         switch (other.gameObject.tag) 
@@ -11,19 +12,32 @@ public class CollisionHandler : MonoBehaviour
                 Debug.Log("This thing is friendly");
                 break;
             case "Finish":
-                LoadNextLevel();
-                break;
-            case "Fuel":
-                Debug.Log("You got fuel");
-                other.gameObject.SetActive(false);
+                StartSuccessSequence();
                 break;
             default:
-                ReloadLevel();
+                StartCrashSequence();
                 break;
         }
     }
 
-    public void LoadNextLevel()
+    void StartSuccessSequence()
+    {
+        // todo add sfx upon crash
+        // todo add particle effect uppon crash
+         GetComponent<Movements>().enabled = false;
+         Invoke("LoadNextLevel", levelLoadDelay);
+    }
+    
+    
+    void StartCrashSequence()
+    {
+        // todo add sfx upon crash
+        // todo add particle effect uppon crash
+        GetComponent<Movements>().enabled = false;
+        Invoke ("ReloadLevel", levelLoadDelay);
+    }
+    
+    void LoadNextLevel()
     {
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         int NextSceneIndex = currentSceneIndex + 1;
@@ -35,7 +49,7 @@ public class CollisionHandler : MonoBehaviour
         SceneManager.LoadScene(NextSceneIndex);
     }
 
-    public void Update() {
+   void Update() {
         if(Input.GetKeyDown(KeyCode.U)){
             LoadNextLevel();
         }
