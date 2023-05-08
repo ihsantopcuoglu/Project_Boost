@@ -197,14 +197,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 534652418}
     m_Modifications:
-    - target: {fileID: 1607371842, guid: 27196afeac0973848be92d17db67c807, type: 3}
-      propertyPath: crash
-      value: 
-      objectReference: {fileID: 8300000, guid: 024dab541e8f46a4787f37288ec8d8ca, type: 3}
-    - target: {fileID: 1607371842, guid: 27196afeac0973848be92d17db67c807, type: 3}
-      propertyPath: success
-      value: 
-      objectReference: {fileID: 8300000, guid: e167823798f3f6745970d7528949d497, type: 3}
     - target: {fileID: 3748830426458052225, guid: 27196afeac0973848be92d17db67c807, type: 3}
       propertyPath: m_Name
       value: Rocket_Mesh
