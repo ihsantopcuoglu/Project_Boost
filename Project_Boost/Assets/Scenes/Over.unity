@@ -631,10 +631,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: LaunchPad_Mesh
       objectReference: {fileID: 0}
-    - target: {fileID: 4188223775172796820, guid: e9ffe7b724aa6e34cbe66036857161cf, type: 3}
-      propertyPath: m_TagString
-      value: Friendly
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e9ffe7b724aa6e34cbe66036857161cf, type: 3}
 --- !u!4 &4028103230183496386 stripped
@@ -652,10 +648,6 @@ PrefabInstance:
     - target: {fileID: 300169597360251697, guid: 0c0d7cf526f7fbc4abcb68f456c8a7e3, type: 3}
       propertyPath: m_Name
       value: LandingPad_Mesh
-      objectReference: {fileID: 0}
-    - target: {fileID: 300169597360251697, guid: 0c0d7cf526f7fbc4abcb68f456c8a7e3, type: 3}
-      propertyPath: m_TagString
-      value: Finish
       objectReference: {fileID: 0}
     - target: {fileID: 8523058131275827484, guid: 0c0d7cf526f7fbc4abcb68f456c8a7e3, type: 3}
       propertyPath: m_RootOrder
