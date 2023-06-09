@@ -1606,14 +1606,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2040687315, guid: c296e56961233e24dbab4481b704a292, type: 3}
-      propertyPath: movementVector.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2040687315, guid: c296e56961233e24dbab4481b704a292, type: 3}
-      propertyPath: movementVector.y
-      value: -14
-      objectReference: {fileID: 0}
     - target: {fileID: 1600808386126497260, guid: c296e56961233e24dbab4481b704a292, type: 3}
       propertyPath: m_Name
       value: Moving_Obstacle
@@ -1621,10 +1613,6 @@ PrefabInstance:
     - target: {fileID: 6580741457236014142, guid: c296e56961233e24dbab4481b704a292, type: 3}
       propertyPath: m_RootOrder
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6580741457236014142, guid: c296e56961233e24dbab4481b704a292, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 5.9424
       objectReference: {fileID: 0}
     - target: {fileID: 6580741457236014142, guid: c296e56961233e24dbab4481b704a292, type: 3}
       propertyPath: m_LocalPosition.x
